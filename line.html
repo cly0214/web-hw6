@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>台灣與薄荷四國2016~2021年入境觀光客統計資訊網</title>
+
+	<style>
+		.highcharts-figure,
+		.highcharts-data-table table {
+		  min-width: 360px;
+		  max-width: 800px;
+		  margin: 1em auto;
+		}
+
+		.highcharts-data-table table {
+		  font-family: Verdana, sans-serif;
+		  border-collapse: collapse;
+		  border: 1px solid #ebebeb;
+		  margin: 10px auto;
+		  text-align: center;
+		  width: 100%;
+		  max-width: 500px;
+		}
+
+		.highcharts-data-table caption {
+		  padding: 1em 0;
+		  font-size: 1.2em;
+		  color: #555;
+		}
+
+		.highcharts-data-table th {
+		  font-weight: 600;
+		  padding: 0.5em;
+		}
+
+		.highcharts-data-table td,
+		.highcharts-data-table th,
+		.highcharts-data-table caption {
+		  padding: 0.5em;
+		}
+
+		.highcharts-data-table thead tr,
+		.highcharts-data-table tr:nth-child(even) {
+		  background: #f8f8f8;
+		}
+
+		.highcharts-data-table tr:hover {
+		  background: #f1f7ff;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+	<figure class="highcharts-figure">
+	  <div id="container"></div>
+	  <p class="highcharts-description">
+	    
+	  </p>
+	</figure>
+	<script>
+		Highcharts.chart('container', {
+
+	  	title: {
+	    text: '台灣與薄荷四國2016~2021年入境觀光客統計',
+	    align: 'left'
+	  },
+
+	  subtitle: {
+	    text: 'Source: UNWTO, 交通部觀光局觀光統計資料庫',
+	    align: 'left'
+	  },
+
+	  yAxis: {
+	    title: {
+	      text: '人數(百萬)'
+	    }
+	  },
+
+	  xAxis: {
+	    accessibility: {
+	      rangeDescription: '年分: 2016~2021'
+	    }
+	  },
+
+	  legend: {
+	    layout: 'vertical',
+	    align: 'right',
+	    verticalAlign: 'middle'
+	  },
+
+	  plotOptions: {
+	    series: {
+	      label: {
+	        connectorAllowed: false
+	      },
+	      pointStart: 2016
+	    }
+	  },
+
+	  series: [{
+	    name: '台灣',
+	    data: [10.7, 10.7, 11.1, 11.9, 1.4, 0.1]
+	  }, {
+	    name: '墨西哥',
+	    data: [35.1, 39.3, 41.3, 45.0, 24.3, 31.9]
+	  }, {
+	    name: '印度尼西亞',
+	    data: [11.5, 14.0, 15.8, 16.1, 4.1, 1.6]
+	  }, {
+	    name: '奈及利亞',
+	    data: [5.3, 5.2, 5.3, 5.4, 1.2, 1.2]
+	  }, {
+	    name: '土耳其',
+	    data: [30.3, 37.6, 45.8, 51.2, 15.9, 29.9]
+	  }],
+
+	  responsive: {
+	    rules: [{
+	      condition: {
+	        maxWidth: 500
+	      },
+	      chartOptions: {
+	        legend: {
+	          layout: 'horizontal',
+	          align: 'center',
+	          verticalAlign: 'bottom'
+	        }
+	      }
+	    }]
+	  }
+
+	});
+	</script>
+</body>
+</html>
